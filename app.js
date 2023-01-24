@@ -6,6 +6,12 @@ app.get('/', (req, res) => {
   res.send('Hello World- is it November?')
 })
 
+app.get('/show', (req, res) => {
+    //res.sendFile('index.html');
+
+    res.sendFile('index.html' , { root : __dirname});
+})
+
 console.log('in the node console');
 
 app.listen(PORT, () => {
